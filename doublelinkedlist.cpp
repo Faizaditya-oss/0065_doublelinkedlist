@@ -46,7 +46,12 @@ class DoubleLinkedList
             // Step 4 : newMode.next = START
             newMode -> next = START;
 
-            
+            // Step 5 : START.prev = newMode (if START exist)
+
+            if (START !=NULL)
+            START -> prev = newMode;
+
+
         )
     }
 };
