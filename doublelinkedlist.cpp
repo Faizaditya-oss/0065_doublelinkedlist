@@ -51,6 +51,9 @@ class DoubleLinkedList
             if (START !=NULL)
             START -> prev = newMode;
 
+            // Step 6 : newMode.prev = NULL
+            newMode -> prev = NULL;
+
 
         )
     }
