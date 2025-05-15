@@ -8,4 +8,11 @@ class Node
     int noMhs;
     Node*next;
     Node*prev;
+
+};
+
+
+class DoubleLinkedList
+{
+    
 }
