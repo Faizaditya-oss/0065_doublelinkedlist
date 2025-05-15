@@ -23,5 +23,13 @@ class DoubleLinkedList
         START = NULL;
     }
     
-    void addNode
-}
+    void addNode()
+    {
+        int nim;
+        cout << "\nEnter the roll number of student :";
+        cin >> nim;
+       
+        // Step 1 : Allocate memory for new mode
+        Node*newMode = new Node();
+    }
+};
