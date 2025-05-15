@@ -68,6 +68,22 @@ class DoubleLinkedList
                 current = current -> next
             }
 
+            if (current -> next != NULL && nim == current -> next -> noMhs)
+            {
+                cout << "\nDuplicate rell number not allowed" << endl;
+                return;
+            }
+
+            // Step 9 : Insert between current and current -> next
+            newMode -> next = current -> next; // Step 9a : newMode.next =
+            newMode -> prev = current; // Step 9b : newMode.prev
+
+            // Insertion Last Node
+            if (current -> next != NULL)
+            current -> next -> prev = newMode; // Step 9c : current
+
+            current -> next = newMode;  // Step 9d
+
         }
     }
 };
