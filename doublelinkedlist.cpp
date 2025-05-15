@@ -31,5 +31,8 @@ class DoubleLinkedList
        
         // Step 1 : Allocate memory for new mode
         Node*newMode = new Node();
+
+        // Step 2 : Insert a beginning if list an empty
+        newMode -> noMhs = nim;
     }
 };
