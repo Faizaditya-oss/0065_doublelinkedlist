@@ -65,7 +65,7 @@ class DoubleLinkedList
             Node*current = START;
             while (current -> next != NULL && current -> next -> noMhs < nim)
             {
-                current = current -> next
+                current = current -> next;
             }
 
             if (current -> next != NULL && nim == current -> next -> noMhs)
@@ -82,8 +82,27 @@ class DoubleLinkedList
             if (current -> next != NULL)
             current -> next -> prev = newMode; // Step 9c : current
 
-            current -> next = newMode;  // Step 9d
+            current -> next = newMode;  // Step 9d : current.next = newMode
 
+        }
+
+        void hapus ()
+        {
+            if (START == NULL)
+            {
+                cout << "\nlist is empty" << endl;
+                return;
+            }
+
+            cout << "\nEnter the roll number of the student whose record is to be deleted" ;
+            int rollNo;
+            cin >> rollNo;
+
+            Node * current = START;
+
+            // Step 1 : Traverse the list to find the node
+            while (current != NULL && current -> noMhs !=rollNo)
+            current = current -> next;
         }
     }
 };
