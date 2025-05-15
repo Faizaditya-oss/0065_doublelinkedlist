@@ -37,7 +37,7 @@ class DoubleLinkedList
 
         // Step 3 : Insert at beginning if list  empty or nim is
         if ( START == NULL || nim <= START -> noMhs )
-        (
+        {
             if ( START != NULL && nim == START -> noMhs )
             {
                 cout << "\nDuplicate number of allowed" <<endl;
@@ -47,14 +47,27 @@ class DoubleLinkedList
             newMode -> next = START;
 
             // Step 5 : START.prev = newMode (if START exist)
-
+            {
             if (START !=NULL)
             START -> prev = newMode;
 
             // Step 6 : newMode.prev = NULL
             newMode -> prev = NULL;
 
+            // Step 7 : START = newMode
+            START = newMode;
+            return;
+            }
 
-        )
+            // Insert in between mode
+            // Step 8 : locate position for insertion
+
+            Node*current = START;
+            while (current -> next != NULL && current -> next -> noMhs < nim)
+            {
+                current = current -> next
+            }
+
+        }
     }
 };
