@@ -32,7 +32,21 @@ class DoubleLinkedList
         // Step 1 : Allocate memory for new mode
         Node*newMode = new Node();
 
-        // Step 2 : Insert a beginning if list an empty
+        // Step 2 : Assign value to the data field
         newMode -> noMhs = nim;
+
+        // Step 3 : Insert at beginning if list  empty or nim is
+        if ( START == NULL || nim <= START -> noMhs )
+        (
+            if ( START != NULL && nim == START -> noMhs )
+            {
+                cout << "\nDuplicate number of allowed" <<endl;
+                return;
+            }
+            // Step 4 : newMode.next = START
+            newMode -> next = START;
+
+            
+        )
     }
 };
